@@ -1,0 +1,1 @@
+this section contains the temp files for the feature vectors extracted from the image. 
