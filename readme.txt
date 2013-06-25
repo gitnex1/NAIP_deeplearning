@@ -1,3 +1,22 @@
+To run the code type in the following at the command prompt:
+./run_NAIP_STANDALONE.sh <mcr_directory> <image_filename>
+
+The image file should be placed in the current directory.
+
+A description of the directories:
+
+Classifiers: This directory contains the Deep Learning based classifier to be used for classifying the images.
+
+Regions: This directory contains the features extracted from the training dataset.
+
+Regions_alt: This is a directory that contains the temporary files for the features extracted from the test image.
+
+results: This directory contains the resulting masked image obtained from the algorithm after the application of the segmentation and classification algorithms followed by the voting.
+
+temp_images: As a part of the fine grain parallelism discussed in the main document, this directory contains the results from the sliced images that are later merged into a single bigger image. This is also a temporary directory for the sub-images.     
+
+Note:- Currently the beta version supports only Linux 64 bit versions with Matlab R2012b.
+
 MATLAB Compiler
 
 1. Prerequisites for Deployment 
@@ -98,7 +117,9 @@ A. Linux x86-64 systems:
         NOTE: When deploying standalone applications, it is possible 
               to run the shell script file run_NAIP_STANDALONE.sh 
               instead of setting environment variables. See 
-              section 2 "Files to Deploy and Package".    
+              section 2 "Files to Deploy and Package".   
+
+ 
 
 
 
